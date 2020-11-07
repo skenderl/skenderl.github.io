@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+}
+
+.light-theme {
+  background-color: #f9f9fa;
+  color: #000000;
+}
+
+.dark-theme {
+  background-color: #01051d;
+  color: #ffffff;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@font-face {
+  font-family: neon-tube-wide;
+  src: url(../fonts/neon-tube-wide.ttf);
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes neon {
+  0%,
+  9%,
+  12%,
+  13%,
+  16%,
+  75%,
+  78%,
+  80%,
+  83%,
+  100% {
+    opacity: 0.9;
+  }
+
+  75.5% {
+    opacity: 0.8;
+  }
+
+  9.5%,
+  80.5% {
+    opacity: 0.5;
+  }
+
+  13.5% {
+    opacity: 0;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.neon-light {
+  font-family: neon-tube-wide;
+  transform: rotate(-4deg);
+  font-size: 16vw;
+  text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px #ff003c80,
+    0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c;
+  display: block;
+}
+
+.neon-light-flicker {
+  animation: flicker 6s infinite;
+}
+
+.neon-light-neon {
+  animation: neon 6s infinite;
+}
+
+.title {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.align-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

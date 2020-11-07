@@ -1,0 +1,27 @@
+{
+    "name": "Skender Lahdhiri",
+    "short_name": "Skender",
+    "lang": "en-US",
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "background_color": "#01051d",
+    "theme_color": "black",
+    "icons": [
+        {
+            "src": "assets/imgs/favicon.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/imgs/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/imgs/maskable_icon.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
