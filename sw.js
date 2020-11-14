@@ -13,11 +13,13 @@ self.addEventListener('notificationclick', function (event) {
 var cacheName = 'skender-lahdhiri';
 var filesToCache = [
   '/',
+  '/assets/fonts/neon-tube-wide.ttf',
+  '/assets/imgs/favicon.png',
   '/index.html',
   '/assets/layouts/index.css',
   '/assets/scripts/main.js',
   '/assets/scripts/push.js',
-  '/assets/scripts/theme.js'
+  '/assets/scripts/theme.js',
 ];
 self.addEventListener('install', function (e) {
   e.waitUntil(
