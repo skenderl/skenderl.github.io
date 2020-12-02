@@ -88,7 +88,7 @@ body {
 .neon-light {
   font-family: neon-tube-wide;
   transform: rotate(-4deg);
-  font-size: 16vw;
+  font-size: min(16vw, 32vh);
   text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px #ff003c80,
     0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c;
   display: block;
