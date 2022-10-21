@@ -1,24 +1,10 @@
 body {
   margin: 0;
-}
-
-.light-theme {
-  background-color: #f9f9fa;
-  color: #000000;
-}
-
-.dark-theme {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #01051d;
   color: #ffffff;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 @font-face {
@@ -108,11 +94,215 @@ body {
   width: 100%;
 }
 
-.align-center {
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: min(4vw, 15px);
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.list {
+  list-style: none;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  padding: 0;
+  height: 3rem;
+}
+
+.social {
+  filter: drop-shadow(0 0 1px #ff3e00) drop-shadow(0 0 1px #ff3e00);
+}
+
+.social-img {
+  width: min(10vw, 12vh);
+  max-width: 18px;
+}
+
+.social:hover {
+  filter: drop-shadow(0 4px 2px #1823f1) drop-shadow(0 -4px 2px #1823f1);
+}
+
+.copyright {
+  opacity: 0.6;
+}
+
+.list .list-item.list-item {
+  height: 100%;
+  position: relative;
+}
+
+.list .list-item .list-item-link {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+  height: 100%;
+  letter-spacing: 0.1em;
+  padding: 0 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.list .list-item:not(.active):hover {
+  filter: drop-shadow(0 4px 2px #1823f1) drop-shadow(0 -4px 2px #1823f1);
+  box-shadow: 0 4px 2px -2px #1823f1;
+}
+
+.list .list-item.active {
+  box-shadow: 0 4px 2px -2px #ff3e00;
+}
+
+p {
+  margin: 6px;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.filter-transition {
+  -webkit-transition: 500ms -webkit-filter ease;
+  -moz-transition: 500ms -moz-filter ease;
+  -moz-transition: 500ms filter ease;
+  -ms-transition: 500ms -ms-filter ease;
+  -o-transition: 500ms -o-filter ease;
+  transition: 500ms filter ease, 500ms -webkit-filter ease;
+}
+
+.box-shadow-transition {
+  -webkit-transition: 500ms -webkit-box-shadow ease;
+  -moz-transition: 500ms -moz-box-shadow ease;
+  -moz-transition: 500ms box-shadow ease;
+  -ms-transition: 500ms -ms-box-shadow ease;
+  -o-transition: 500ms -o-box-shadow ease;
+  transition: 500ms box-shadow ease, 500ms -webkit-box-shadow ease;
+}
+
+.p-sm {
+  padding: 0.5em;
+}
+.p-md {
+  padding: 1em;
+}
+.p-lg {
+  padding: 2em;
+}
+
+.m-sm {
+  margin: 0.5em;
+}
+.m-md {
+  margin: 1em;
+}
+.m-lg {
+  margin: 2em;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-gap-sm {
+  gap: 1rem;
+}
+
+.grid-gap-md {
+  gap: 1.5rem;
+}
+
+.grid-gap-lg {
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .lg-max-w-l {
+    max-width: 64rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.project {
+  text-decoration: none;
+}
+
+.project section {
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  border-radius: 0.5rem;
+  border: solid 1px #334155;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.project section h2 {
+  text-shadow: 2px -2px #1823f1;
+}
+
+.project section:hover {
+  transform: translate(0, -0.25rem);
+  box-shadow: 0 2px 2px #1823f1, 0 0 2px #ff3e00;
+}
+
+.techs {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: solid 1px #334155;
+}
+
+.techs img {
+  filter: invert(100%);
+  padding: 0 2px;
 }

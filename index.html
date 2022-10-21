@@ -1,27 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>D'`;$?K7I|:zEhC/Sttb0p_:m8[kFED%U0/.x`<u):rqvonsrkj0nmONd*hg`Hd]#a`BX|?Uy<XWPUTMqQJnH0FKJCHAe?>CBA:?87[;{z8765.R2r0)(-&J$)('&%|Bcy?}|^]s9qpon4Uk1onPled*hJIe^$E[!_A@\[TxwWVOTSLpPOHMFjJI+Ae?'C<;@9]~}5:32V0v43,Pqp(L,%k)"Fg%|B"!awv{zs9wvXtmlk1|</title>
-	<link rel="stylesheet" href="./assets/layouts/index.css" />
-	<link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
-	<meta name="Description" content="Skender Lahdhiri">
-	<link rel="apple-touch-icon" href="./assets/imgs/favicon.png" />
-	<meta name="theme-color" content="#01051d"/>
-	<link rel="manifest" href="./manifest.json">
-	<meta name="author" content="Skender Lahdhiri">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="Skender, Lahdhiri">
+  <meta charset="UTF-8">
+  <title>Skender Lahdhiri</title>
+  <link rel="stylesheet" href="./assets/layouts/index.css" />
+  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
+  <meta name="Description" content="Skender Lahdhiri">
+  <link rel="apple-touch-icon" href="./assets/imgs/favicon.png" />
+  <meta name="theme-color" content="#01051d" />
+  <link rel="manifest" href="./manifest.json">
+  <meta name="author" content="Skender Lahdhiri">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Skender, Lahdhiri">
 </head>
+
 <body>
-	<div class="title noselect">
-		<div class="align-center" onclick="handleTitleClick()">
-			<span class="neon-light neon-light-flicker">ºSKENDERº</span>
-			<span class="neon-light neon-light-neon">.LAHDHIRI.</span>
-		</div>
-	</div>
-	<script src="./assets/scripts/main.js"></script>
-	<script src="./assets/scripts/push.js"></script>
-	<script src="./assets/scripts/theme.js"></script>
+  <header class="flex justify-center p-lg">
+
+    <ul class="list flex justify-center items-center">
+      <li class="list-item active opacity-transition box-shadow-transition filter-transition"
+        class:active={isActive(route.path)}>
+        <a href="/" class="list-item-link">Home</a>
+      </li>
+      <li class="list-item opacity-transition box-shadow-transition filter-transition"
+        class:active={isActive(route.path)}>
+        <a href="projects" class="list-item-link">Projects</a>
+      </li>
+    </ul>
+  </header>
+
+  <main class="flex flex-1 justify-center m-auto noselect">
+    <div class="m-auto flex column logo filter-transition drop-shadow-transition" onclick="handleTitleClick()">
+      <span class="neon-light neon-light-flicker">ºSKENDERº</span>
+      <span class="neon-light neon-light-neon">.LAHDHIRI.</span>
+    </div>
+  </main>
+
+  <footer class="flex justify-center p-md">
+    <div class="flex column items-center">
+      <ul class="list flex justify-center items-center">
+        <li>
+          <a class="social p-sm filter-transition drop-shadow-transition" href="https://www.linkedin.com/in/skenderl/"
+            aria-label="LinkedIn" target="_blank">
+            <img class="social-img no-select" width="20" src="./assets/imgs/socials/linkedin.svg" alt="LinkedIn Logo" />
+          </a>
+        </li>
+        <li>
+          <a class="social p-sm filter-transition drop-shadow-transition" href="https://github.com/skenderl"
+            aria-label="Github" target="_blank">
+            <img class="social-img no-select" width="20" src="./assets/imgs/socials/github.svg" alt="Github Logo" />
+          </a>
+        </li>
+        <li>
+          <a class="social p-sm filter-transition drop-shadow-transition" href="mailto:soloduocontact@gmail.com"
+            aria-label="Email" target="_blank">
+            <img class="social-img no-select" width="20" src="./assets/imgs/socials/email.svg" alt="Email Logo" />
+          </a>
+        </li>
+        <li>
+          <a class="social p-sm filter-transition drop-shadow-transition" href="./resume.pdf"
+            aria-label="Resume" target="_blank">
+            <img class="social-img no-select" width="20" src="./assets/imgs/socials/resume.svg" alt="Resume Logo" />
+          </a>
+        </li>
+      </ul>
+
+      <p class="no-select copyright">All rights reserved © Skenderl 2022</p>
+    </div>
+  </footer>
+
+
+  <script src="./assets/scripts/main.js"></script>
+  <script src="./assets/scripts/push.js"></script>
 </body>
+
 </html>
