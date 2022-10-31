@@ -1,99 +1,3 @@
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #01051d;
-  color: #ffffff;
-}
-
-@font-face {
-  font-family: neon-tube-wide;
-  src: url(../fonts/neon-tube-wide.ttf);
-}
-
-@keyframes flicker {
-  0%,
-  19.999%,
-  22%,
-  62.999%,
-  64%,
-  64.999%,
-  70%,
-  100% {
-    opacity: 0.99;
-  }
-
-  20%,
-  21.999%,
-  63%,
-  63.999%,
-  65%,
-  69.999% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes neon {
-  0%,
-  9%,
-  12%,
-  13%,
-  16%,
-  75%,
-  78%,
-  80%,
-  83%,
-  100% {
-    opacity: 0.9;
-  }
-
-  75.5% {
-    opacity: 0.8;
-  }
-
-  9.5%,
-  80.5% {
-    opacity: 0.5;
-  }
-
-  13.5% {
-    opacity: 0;
-  }
-}
-
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.neon-light {
-  font-family: neon-tube-wide;
-  transform: rotate(-4deg);
-  font-size: min(16vw, 32vh);
-  text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px #ff003c80,
-    0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c;
-  display: block;
-}
-
-.neon-light-flicker {
-  animation: flicker 6s infinite;
-}
-
-.neon-light-neon {
-  animation: neon 6s infinite;
-}
-
-.title {
-  text-align: center;
-  height: 100%;
-  width: 100%;
-}
-
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: min(4vw, 15px);
@@ -106,36 +10,37 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-.list {
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #01051d;
+  color: #ffffff;
+}
+
+.pages {
   list-style: none;
   margin: 0;
   padding: 0;
   height: 3rem;
 }
 
-.social {
-  filter: drop-shadow(0 0 1px #ff3e00) drop-shadow(0 0 1px #ff3e00);
-}
-
-.social-img {
-  width: min(10vw, 12vh);
-  max-width: 18px;
-}
-
-.social:hover {
-  filter: drop-shadow(0 4px 2px #1823f1) drop-shadow(0 -4px 2px #1823f1);
-}
-
-.copyright {
-  opacity: 0.6;
-}
-
-.list .list-item.list-item {
+.pages .pages-item {
   height: 100%;
   position: relative;
 }
 
-.list .list-item .list-item-link {
+.pages .pages-item.active {
+  box-shadow: 0 4px 2px -2px #ff3e00;
+}
+
+.pages .pages-item:not(.active):hover {
+  filter: drop-shadow(0 4px 2px #1823f1) drop-shadow(0 -4px 2px #1823f1);
+  box-shadow: 0 4px 2px -2px #1823f1;
+}
+
+.pages .pages-item .pages-item-link {
   align-items: center;
   color: #fff;
   display: flex;
@@ -148,17 +53,12 @@ body {
   text-transform: uppercase;
 }
 
-.list .list-item:not(.active):hover {
-  filter: drop-shadow(0 4px 2px #1823f1) drop-shadow(0 -4px 2px #1823f1);
-  box-shadow: 0 4px 2px -2px #1823f1;
-}
-
-.list .list-item.active {
-  box-shadow: 0 4px 2px -2px #ff3e00;
-}
-
 p {
   margin: 6px;
+}
+
+.copyright {
+  opacity: 0.6;
 }
 
 .no-select {
@@ -172,22 +72,6 @@ p {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.column {
-  flex-direction: column;
 }
 
 .filter-transition {
@@ -221,37 +105,49 @@ p {
 .m-sm {
   margin: 0.5em;
 }
-.m-md {
-  margin: 1em;
+.m-y-md {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-.m-lg {
-  margin: 2em;
+.m-t-md {
+  margin-top: 1em;
 }
-
-.flex-1 {
-  flex: 1;
+.m-t-lg {
+  margin-top: 2em;
 }
-
 .m-auto {
   margin: auto;
 }
-
 .m-l-auto {
   margin-left: auto;
+}
+
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
 }
 
 .grid {
   display: grid;
 }
-
 .grid-gap-sm {
   gap: 1rem;
 }
-
 .grid-gap-md {
   gap: 1.5rem;
 }
-
 .grid-gap-lg {
   gap: 2rem;
 }
@@ -266,43 +162,4 @@ p {
   .sm-grid-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-.project {
-  text-decoration: none;
-}
-
-.project section {
-  height: 100%;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #cbd5e1;
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  border-radius: 0.5rem;
-  border: solid 1px #334155;
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-}
-
-.project section h2 {
-  text-shadow: 2px -2px #1823f1;
-}
-
-.project section:hover {
-  transform: translate(0, -0.25rem);
-  box-shadow: 0 2px 2px #1823f1, 0 0 2px #ff3e00;
-}
-
-.techs {
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: solid 1px #334155;
-}
-
-.techs img {
-  filter: invert(100%);
-  padding: 0 2px;
 }

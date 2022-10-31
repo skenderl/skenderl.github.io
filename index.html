@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Skender Lahdhiri</title>
   <link rel="stylesheet" href="./assets/layouts/index.css" />
+  <link rel="stylesheet" href="./assets/layouts/home.css" />
   <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
   <meta name="Description" content="Skender Lahdhiri">
   <link rel="apple-touch-icon" href="./assets/imgs/favicon.png" />
@@ -18,14 +19,15 @@
 <body>
   <header class="flex justify-center p-lg">
 
-    <ul class="list flex justify-center items-center">
-      <li class="list-item active opacity-transition box-shadow-transition filter-transition"
-        class:active={isActive(route.path)}>
-        <a href="/" class="list-item-link">Home</a>
+    <ul class="pages flex justify-center items-center">
+      <li class="pages-item active opacity-transition box-shadow-transition filter-transition">
+        <a href="/" class="pages-item-link">Home</a>
       </li>
-      <li class="list-item opacity-transition box-shadow-transition filter-transition"
-        class:active={isActive(route.path)}>
-        <a href="projects" class="list-item-link">Projects</a>
+      <li class="pages-item opacity-transition box-shadow-transition filter-transition">
+        <a href="experience" class="pages-item-link">Experience</a>
+      </li>
+      <li class="pages-item opacity-transition box-shadow-transition filter-transition">
+        <a href="about" class="pages-item-link">About</a>
       </li>
     </ul>
   </header>
@@ -39,34 +41,7 @@
 
   <footer class="flex justify-center p-md">
     <div class="flex column items-center">
-      <ul class="list flex justify-center items-center">
-        <li>
-          <a class="social p-sm filter-transition drop-shadow-transition" href="https://www.linkedin.com/in/skenderl/"
-            aria-label="LinkedIn" target="_blank">
-            <img class="social-img no-select" width="20" src="./assets/imgs/socials/linkedin.svg" alt="LinkedIn Logo" />
-          </a>
-        </li>
-        <li>
-          <a class="social p-sm filter-transition drop-shadow-transition" href="https://github.com/skenderl"
-            aria-label="Github" target="_blank">
-            <img class="social-img no-select" width="20" src="./assets/imgs/socials/github.svg" alt="Github Logo" />
-          </a>
-        </li>
-        <li>
-          <a class="social p-sm filter-transition drop-shadow-transition" href="mailto:soloduocontact@gmail.com"
-            aria-label="Email" target="_blank">
-            <img class="social-img no-select" width="20" src="./assets/imgs/socials/email.svg" alt="Email Logo" />
-          </a>
-        </li>
-        <li>
-          <a class="social p-sm filter-transition drop-shadow-transition" href="./resume.pdf"
-            aria-label="Resume" target="_blank">
-            <img class="social-img no-select" width="20" src="./assets/imgs/socials/resume.svg" alt="Resume Logo" />
-          </a>
-        </li>
-      </ul>
-
-      <p class="no-select copyright">All rights reserved © Skenderl 2022</p>
+      <p class="no-select copyright">All rights reserved © Skender Lahdhiri</p>
     </div>
   </footer>
 
