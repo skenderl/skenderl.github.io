@@ -89,7 +89,25 @@ p {
   -moz-transition: 500ms box-shadow ease;
   -ms-transition: 500ms -ms-box-shadow ease;
   -o-transition: 500ms -o-box-shadow ease;
-  transition: 500ms box-shadow ease, 500ms -webkit-box-shadow ease;
+  transition: 500ms box-shadow ease;
+}
+
+.transform-transition {
+  -webkit-transition: 500ms -webkit-transform ease;
+  -o-transition: 500ms transform ease;
+  transition: 500ms transform ease;
+  transition: 500ms -webkit-transform ease;
+  transition: 500ms transform ease, 500ms -webkit-transform ease;
+}
+
+.box-shadow-transform-transition {
+  -webkit-transition: 500ms -webkit-transform ease,
+    500ms -webkit-box-shadow ease;
+  transition: 500ms -webkit-transform ease, 500ms -webkit-box-shadow ease;
+  -o-transition: 500ms transform ease, 500ms box-shadow ease;
+  transition: 500ms transform ease, 500ms box-shadow ease;
+  transition: 500ms transform ease, 500ms box-shadow ease,
+    500ms -webkit-transform ease, 500ms -webkit-box-shadow ease;
 }
 
 .p-sm {
@@ -158,8 +176,12 @@ p {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   .sm-grid-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.text-center {
+  text-align: center;
 }

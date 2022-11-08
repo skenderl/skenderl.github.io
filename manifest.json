@@ -2,7 +2,7 @@
     "name": "Skender Lahdhiri",
     "short_name": "Skender",
     "lang": "en-US",
-    "start_url": "/index.html",
+    "start_url": "/",
     "display": "fullscreen",
     "background_color": "#01051d",
     "theme_color": "black",
